@@ -8,107 +8,141 @@
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-                   Helvetica, Arial, sans-serif;
-      background: #f9f9fb;
-      color: #1a1a2e;
-      line-height: 1.7;
+      font-family: "Georgia", "Times New Roman", serif;
+      background: #fafaf8;
+      color: #1c1c1c;
+      line-height: 1.75;
     }
 
     header {
-      background: #6750a4;
+      background: #1c1c1c;
       color: #fff;
-      padding: 48px 24px 36px;
+      padding: 56px 24px 48px;
       text-align: center;
+      border-bottom: 3px solid #4a3f8f;
     }
-    header .icon { font-size: 52px; }
-    header h1 { font-size: 2rem; font-weight: 700; margin-top: 10px; }
-    header p  { opacity: .85; margin-top: 6px; font-size: .95rem; }
+    header h1 {
+      font-size: 1.9rem;
+      font-weight: 400;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+    header p {
+      margin-top: 10px;
+      font-size: 0.9rem;
+      color: #aaa;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-style: italic;
+    }
 
     main {
-      max-width: 760px;
-      margin: 40px auto;
-      padding: 0 20px 60px;
+      max-width: 720px;
+      margin: 52px auto;
+      padding: 0 24px 80px;
     }
 
-    .card {
-      background: #fff;
-      border-radius: 12px;
-      box-shadow: 0 2px 8px rgba(0,0,0,.07);
-      padding: 28px 32px;
-      margin-bottom: 24px;
+    .updated {
+      text-align: center;
+      font-size: 0.78rem;
+      color: #999;
+      margin-bottom: 40px;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    .section {
+      margin-bottom: 48px;
+      border-top: 1px solid #ddd;
+      padding-top: 32px;
     }
 
     h2 {
-      font-size: 1.15rem;
-      font-weight: 700;
-      color: #6750a4;
-      margin-bottom: 12px;
-      display: flex;
-      align-items: center;
-      gap: 8px;
+      font-size: 0.72rem;
+      font-weight: 600;
+      color: #4a3f8f;
+      margin-bottom: 16px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
     }
-    h2 .ico { font-size: 1.2rem; }
 
-    p   { margin-bottom: 10px; font-size: .95rem; color: #333; }
+    p {
+      margin-bottom: 12px;
+      font-size: 0.96rem;
+      color: #2a2a2a;
+    }
     p:last-child { margin-bottom: 0; }
 
-    ul  { padding-left: 20px; margin-bottom: 10px; }
-    li  { margin-bottom: 6px; font-size: .95rem; color: #333; }
+    ul {
+      padding-left: 18px;
+      margin-bottom: 12px;
+    }
+    li {
+      margin-bottom: 7px;
+      font-size: 0.96rem;
+      color: #2a2a2a;
+    }
 
     .badge {
       display: inline-block;
-      background: #ede7f6;
-      color: #6750a4;
-      font-size: .75rem;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-size: 0.68rem;
       font-weight: 600;
-      border-radius: 20px;
-      padding: 2px 10px;
-      margin-left: 8px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      border-radius: 2px;
+      padding: 2px 7px;
+      margin-left: 10px;
       vertical-align: middle;
+      position: relative;
+      top: -2px;
     }
-    .badge.green  { background: #e8f5e9; color: #2e7d32; }
-    .badge.orange { background: #fff3e0; color: #e65100; }
+    .badge.green  { background: #e6f4ea; color: #276732; border: 1px solid #b6dbbf; }
+    .badge.orange { background: #fef3e2; color: #9a4f00; border: 1px solid #f0d08a; }
 
     table {
       width: 100%;
       border-collapse: collapse;
-      font-size: .9rem;
-      margin-top: 8px;
+      font-size: 0.9rem;
+      margin-top: 12px;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
     }
     th {
-      background: #ede7f6;
-      color: #6750a4;
+      background: #f2f0f9;
+      color: #4a3f8f;
       text-align: left;
-      padding: 8px 12px;
+      padding: 9px 14px;
       font-weight: 600;
+      font-size: 0.78rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      border-bottom: 2px solid #ddd;
     }
-    td { padding: 8px 12px; border-bottom: 1px solid #f0f0f0; color: #333; }
+    td {
+      padding: 9px 14px;
+      border-bottom: 1px solid #ebebeb;
+      color: #2a2a2a;
+      vertical-align: top;
+    }
     tr:last-child td { border-bottom: none; }
 
-    a { color: #6750a4; text-decoration: none; }
-    a:hover { text-decoration: underline; }
-
-    .updated {
-      text-align: center;
-      font-size: .8rem;
-      color: #888;
-      margin-top: -12px;
-      margin-bottom: 28px;
-    }
+    a { color: #4a3f8f; text-decoration: none; border-bottom: 1px solid #c5bfe8; }
+    a:hover { border-bottom-color: #4a3f8f; }
 
     footer {
       text-align: center;
-      font-size: .8rem;
-      color: #aaa;
-      padding-bottom: 32px;
+      font-size: 0.78rem;
+      color: #bbb;
+      padding-bottom: 40px;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      letter-spacing: 0.04em;
     }
   </style>
 </head>
 <body>
 
 <header>
-  <div class="icon">🎙️</div>
   <h1>Scribr Privacy Policy</h1>
   <p>Clear, honest information about how your data is handled.</p>
 </header>
@@ -117,8 +151,8 @@
   <p class="updated">Last updated: March 22, 2026</p>
 
   <!-- 1. Overview -->
-  <div class="card">
-    <h2><span class="ico">📋</span> Overview</h2>
+  <div class="section">
+    <h2>Overview</h2>
     <p>
       Scribr (<strong>com.flexkit.scribr</strong>) is a voice recording, transcription, and
       summarization app. Transcription and summarization run <strong>entirely on your
@@ -131,8 +165,8 @@
   </div>
 
   <!-- 2. Audio & Recordings -->
-  <div class="card">
-    <h2><span class="ico">🎤</span> Audio Recordings <span class="badge green">Stays on device</span></h2>
+  <div class="section">
+    <h2>Audio Recordings <span class="badge green">Stays on device</span></h2>
     <p>
       All audio recordings are stored <strong>locally on your device only</strong>. Audio files
       are <em>never</em> uploaded to any server, cloud storage, or third-party service, not
@@ -146,8 +180,8 @@
   </div>
 
   <!-- 3. Transcriptions & Summaries -->
-  <div class="card">
-    <h2><span class="ico">📝</span> Transcriptions &amp; Summaries</h2>
+  <div class="section">
+    <h2>Transcriptions &amp; Summaries</h2>
     <p>
       Transcription is performed locally by the <strong>Whisper</strong> model running on your
       device. Summarization is performed locally by the <strong>Qwen3</strong> model running on
@@ -164,8 +198,8 @@
   </div>
 
   <!-- 4. Cloud Sync -->
-  <div class="card">
-    <h2><span class="ico">☁️</span> Cloud Sync (Optional) <span class="badge orange">Requires sign-in</span></h2>
+  <div class="section">
+    <h2>Cloud Sync (Optional) <span class="badge orange">Requires sign-in</span></h2>
     <p>
       Cloud sync is optional and requires signing in with a Google account. When signed in, the
       following metadata is stored in <strong>Google Firebase Firestore</strong> under your
@@ -180,16 +214,16 @@
       <tr><td>Detected language</td><td>Language label display</td></tr>
       <tr><td>Folder / favorite flag</td><td>Organization across devices</td></tr>
     </table>
-    <p style="margin-top:12px">
-      You can sign out at any time from Settings → Account &amp; Sync. Signing out stops all
+    <p style="margin-top:14px">
+      You can sign out at any time from Settings &rarr; Account &amp; Sync. Signing out stops all
       future syncing. To delete your cloud data, delete individual recordings from the app while
       signed in, or contact us (see below).
     </p>
   </div>
 
   <!-- 5. Google Sign-In & Firebase Auth -->
-  <div class="card">
-    <h2><span class="ico">🔐</span> Google Sign-In &amp; Firebase Authentication</h2>
+  <div class="section">
+    <h2>Google Sign-In &amp; Firebase Authentication</h2>
     <p>
       Sign-in is handled by <strong>Google Sign-In</strong> and <strong>Firebase Authentication</strong>.
       When you sign in, Google provides your name, email address, and profile photo to the app
@@ -202,8 +236,8 @@
   </div>
 
   <!-- 6. Analytics -->
-  <div class="card">
-    <h2><span class="ico">📊</span> Analytics</h2>
+  <div class="section">
+    <h2>Analytics</h2>
     <p>
       We use <strong>Firebase Analytics</strong> to collect anonymous usage data to understand
       how the app is used and improve it. The data collected includes:
@@ -224,8 +258,8 @@
   </div>
 
   <!-- 7. Crash Reporting -->
-  <div class="card">
-    <h2><span class="ico">🛠️</span> Crash Reporting</h2>
+  <div class="section">
+    <h2>Crash Reporting</h2>
     <p>
       We use <strong>Firebase Crashlytics</strong> to automatically collect crash reports and
       non-fatal error reports. These reports help us identify and fix bugs. Reports contain:
@@ -241,8 +275,8 @@
   </div>
 
   <!-- 8. Advertising -->
-  <div class="card">
-    <h2><span class="ico">📣</span> Advertising</h2>
+  <div class="section">
+    <h2>Advertising</h2>
     <p>
       The free version of Scribr displays ads served by <strong>Google AdMob</strong>. AdMob
       may use your device's advertising ID and other signals to show relevant ads.
@@ -258,8 +292,8 @@
   </div>
 
   <!-- 9. In-App Purchases -->
-  <div class="card">
-    <h2><span class="ico">💳</span> In-App Purchases</h2>
+  <div class="section">
+    <h2>In-App Purchases</h2>
     <p>
       The only purchase available is <strong>Remove Ads</strong>, processed entirely by the
       <strong>Google Play Store</strong>. Scribr does not collect or store any payment
@@ -268,8 +302,8 @@
   </div>
 
   <!-- 10. Permissions -->
-  <div class="card">
-    <h2><span class="ico">🔑</span> App Permissions</h2>
+  <div class="section">
+    <h2>App Permissions</h2>
     <table>
       <tr><th>Permission</th><th>Why it's needed</th></tr>
       <tr><td>Microphone</td><td>Record audio for transcription</td></tr>
@@ -280,8 +314,8 @@
   </div>
 
   <!-- 11. Data Retention -->
-  <div class="card">
-    <h2><span class="ico">🗓️</span> Data Retention</h2>
+  <div class="section">
+    <h2>Data Retention</h2>
     <ul>
       <li><strong>Local data:</strong> Retained until you delete a recording or uninstall the app.</li>
       <li><strong>Cloud data:</strong> Retained in Firestore while your account is active. Signing
@@ -293,8 +327,8 @@
   </div>
 
   <!-- 12. Children -->
-  <div class="card">
-    <h2><span class="ico">👶</span> Children's Privacy</h2>
+  <div class="section">
+    <h2>Children's Privacy</h2>
     <p>
       Scribr is not directed at children under the age of 13. We do not knowingly collect
       personal information from children under 13. If you believe a child has provided personal
@@ -303,8 +337,8 @@
   </div>
 
   <!-- 13. Your Rights -->
-  <div class="card">
-    <h2><span class="ico">⚖️</span> Your Rights</h2>
+  <div class="section">
+    <h2>Your Rights</h2>
     <p>You have the right to:</p>
     <ul>
       <li><strong>Access:</strong> request a copy of data we hold about you.</li>
@@ -316,8 +350,8 @@
   </div>
 
   <!-- 14. Changes -->
-  <div class="card">
-    <h2><span class="ico">🔄</span> Changes to This Policy</h2>
+  <div class="section">
+    <h2>Changes to This Policy</h2>
     <p>
       We may update this privacy policy from time to time. When we do, the "Last updated" date
       at the top of this page will be revised. We encourage you to review this page periodically.
@@ -326,8 +360,8 @@
   </div>
 
   <!-- 15. Contact -->
-  <div class="card">
-    <h2><span class="ico">📬</span> Contact</h2>
+  <div class="section">
+    <h2>Contact</h2>
     <p>
       If you have any questions or requests regarding this privacy policy or your data, please
       contact us at:
