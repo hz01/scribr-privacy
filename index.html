@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy - Scribr</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+                   Helvetica, Arial, sans-serif;
+      background: #f9f9fb;
+      color: #1a1a2e;
+      line-height: 1.7;
+    }
+
+    header {
+      background: #6750a4;
+      color: #fff;
+      padding: 48px 24px 36px;
+      text-align: center;
+    }
+    header .icon { font-size: 52px; }
+    header h1 { font-size: 2rem; font-weight: 700; margin-top: 10px; }
+    header p  { opacity: .85; margin-top: 6px; font-size: .95rem; }
+
+    main {
+      max-width: 760px;
+      margin: 40px auto;
+      padding: 0 20px 60px;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,.07);
+      padding: 28px 32px;
+      margin-bottom: 24px;
+    }
+
+    h2 {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: #6750a4;
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    h2 .ico { font-size: 1.2rem; }
+
+    p   { margin-bottom: 10px; font-size: .95rem; color: #333; }
+    p:last-child { margin-bottom: 0; }
+
+    ul  { padding-left: 20px; margin-bottom: 10px; }
+    li  { margin-bottom: 6px; font-size: .95rem; color: #333; }
+
+    .badge {
+      display: inline-block;
+      background: #ede7f6;
+      color: #6750a4;
+      font-size: .75rem;
+      font-weight: 600;
+      border-radius: 20px;
+      padding: 2px 10px;
+      margin-left: 8px;
+      vertical-align: middle;
+    }
+    .badge.green  { background: #e8f5e9; color: #2e7d32; }
+    .badge.orange { background: #fff3e0; color: #e65100; }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: .9rem;
+      margin-top: 8px;
+    }
+    th {
+      background: #ede7f6;
+      color: #6750a4;
+      text-align: left;
+      padding: 8px 12px;
+      font-weight: 600;
+    }
+    td { padding: 8px 12px; border-bottom: 1px solid #f0f0f0; color: #333; }
+    tr:last-child td { border-bottom: none; }
+
+    a { color: #6750a4; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    .updated {
+      text-align: center;
+      font-size: .8rem;
+      color: #888;
+      margin-top: -12px;
+      margin-bottom: 28px;
+    }
+
+    footer {
+      text-align: center;
+      font-size: .8rem;
+      color: #aaa;
+      padding-bottom: 32px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="icon">🎙️</div>
+  <h1>Scribr Privacy Policy</h1>
+  <p>Clear, honest information about how your data is handled.</p>
+</header>
+
+<main>
+  <p class="updated">Last updated: March 22, 2026</p>
+
+  <!-- 1. Overview -->
+  <div class="card">
+    <h2><span class="ico">📋</span> Overview</h2>
+    <p>
+      Scribr (<strong>com.flexkit.scribr</strong>) is a voice recording, transcription, and
+      summarization app. Transcription and summarization run <strong>entirely on your
+      device</strong> using offline AI models. Your audio is never sent to any server for
+      processing.
+    </p>
+    <p>
+      This policy explains what data is collected, why, and how you can control it.
+    </p>
+  </div>
+
+  <!-- 2. Audio & Recordings -->
+  <div class="card">
+    <h2><span class="ico">🎤</span> Audio Recordings <span class="badge green">Stays on device</span></h2>
+    <p>
+      All audio recordings are stored <strong>locally on your device only</strong>. Audio files
+      are <em>never</em> uploaded to any server, cloud storage, or third-party service, not
+      even when cloud sync is enabled.
+    </p>
+    <ul>
+      <li>Recordings are saved in the app's private documents directory.</li>
+      <li>Deleting a recording from the app permanently removes the file from your device.</li>
+      <li>Uninstalling the app removes all stored recordings.</li>
+    </ul>
+  </div>
+
+  <!-- 3. Transcriptions & Summaries -->
+  <div class="card">
+    <h2><span class="ico">📝</span> Transcriptions &amp; Summaries</h2>
+    <p>
+      Transcription is performed locally by the <strong>Whisper</strong> model running on your
+      device. Summarization is performed locally by the <strong>Qwen3</strong> model running on
+      your device. No audio or text is sent to any external AI service.
+    </p>
+    <p>
+      Transcription text and summaries are stored in a local SQLite database on your device.
+    </p>
+    <p>
+      <strong>If you sign in with Google</strong> and cloud sync is active, transcription text,
+      summaries, titles, and metadata are synced to <strong>Firebase Firestore</strong> (see
+      Cloud Sync below). Audio files are <em>never</em> synced.
+    </p>
+  </div>
+
+  <!-- 4. Cloud Sync -->
+  <div class="card">
+    <h2><span class="ico">☁️</span> Cloud Sync (Optional) <span class="badge orange">Requires sign-in</span></h2>
+    <p>
+      Cloud sync is optional and requires signing in with a Google account. When signed in, the
+      following metadata is stored in <strong>Google Firebase Firestore</strong> under your
+      user account:
+    </p>
+    <table>
+      <tr><th>Data</th><th>Purpose</th></tr>
+      <tr><td>Recording title</td><td>Display across devices</td></tr>
+      <tr><td>Transcription text</td><td>Access transcripts on other devices</td></tr>
+      <tr><td>Summary text</td><td>Access summaries on other devices</td></tr>
+      <tr><td>Duration, date created</td><td>Sorting and display</td></tr>
+      <tr><td>Detected language</td><td>Language label display</td></tr>
+      <tr><td>Folder / favorite flag</td><td>Organization across devices</td></tr>
+    </table>
+    <p style="margin-top:12px">
+      You can sign out at any time from Settings → Account &amp; Sync. Signing out stops all
+      future syncing. To delete your cloud data, delete individual recordings from the app while
+      signed in, or contact us (see below).
+    </p>
+  </div>
+
+  <!-- 5. Google Sign-In & Firebase Auth -->
+  <div class="card">
+    <h2><span class="ico">🔐</span> Google Sign-In &amp; Firebase Authentication</h2>
+    <p>
+      Sign-in is handled by <strong>Google Sign-In</strong> and <strong>Firebase Authentication</strong>.
+      When you sign in, Google provides your name, email address, and profile photo to the app
+      for display purposes. We do not store your password.
+    </p>
+    <p>
+      Google's privacy policy applies to the sign-in process:
+      <a href="https://policies.google.com/privacy" target="_blank">policies.google.com/privacy</a>
+    </p>
+  </div>
+
+  <!-- 6. Analytics -->
+  <div class="card">
+    <h2><span class="ico">📊</span> Analytics</h2>
+    <p>
+      We use <strong>Firebase Analytics</strong> to collect anonymous usage data to understand
+      how the app is used and improve it. The data collected includes:
+    </p>
+    <ul>
+      <li>Feature usage events (e.g. "transcription started", "summary generated")</li>
+      <li>App version and device type (anonymized)</li>
+      <li>Crash and error rates</li>
+    </ul>
+    <p>
+      Analytics data is aggregated and anonymous. It cannot be used to identify you personally.
+      No recording content, transcriptions, or summaries are included in analytics events.
+    </p>
+    <p>
+      Firebase Analytics is governed by Google's privacy policy:
+      <a href="https://policies.google.com/privacy" target="_blank">policies.google.com/privacy</a>
+    </p>
+  </div>
+
+  <!-- 7. Crash Reporting -->
+  <div class="card">
+    <h2><span class="ico">🛠️</span> Crash Reporting</h2>
+    <p>
+      We use <strong>Firebase Crashlytics</strong> to automatically collect crash reports and
+      non-fatal error reports. These reports help us identify and fix bugs. Reports contain:
+    </p>
+    <ul>
+      <li>Stack traces and error messages</li>
+      <li>Device model and OS version</li>
+      <li>App version</li>
+    </ul>
+    <p>
+      Crash reports do not contain your recordings, transcriptions, or any personal content.
+    </p>
+  </div>
+
+  <!-- 8. Advertising -->
+  <div class="card">
+    <h2><span class="ico">📣</span> Advertising</h2>
+    <p>
+      The free version of Scribr displays ads served by <strong>Google AdMob</strong>. AdMob
+      may use your device's advertising ID and other signals to show relevant ads.
+    </p>
+    <p>
+      Purchasing <strong>Remove Ads</strong> from the app permanently disables all advertising.
+      No ad data is collected for premium users.
+    </p>
+    <p>
+      Google's advertising privacy policy:
+      <a href="https://policies.google.com/technologies/ads" target="_blank">policies.google.com/technologies/ads</a>
+    </p>
+  </div>
+
+  <!-- 9. In-App Purchases -->
+  <div class="card">
+    <h2><span class="ico">💳</span> In-App Purchases</h2>
+    <p>
+      The only purchase available is <strong>Remove Ads</strong>, processed entirely by the
+      <strong>Google Play Store</strong>. Scribr does not collect or store any payment
+      information. Purchase receipts are verified locally through the Play Store.
+    </p>
+  </div>
+
+  <!-- 10. Permissions -->
+  <div class="card">
+    <h2><span class="ico">🔑</span> App Permissions</h2>
+    <table>
+      <tr><th>Permission</th><th>Why it's needed</th></tr>
+      <tr><td>Microphone</td><td>Record audio for transcription</td></tr>
+      <tr><td>Storage (read)</td><td>Import existing audio files from your device</td></tr>
+      <tr><td>Internet</td><td>Cloud sync, sign-in, ads, analytics</td></tr>
+      <tr><td>Notifications</td><td>Progress notifications for background transcription</td></tr>
+    </table>
+  </div>
+
+  <!-- 11. Data Retention -->
+  <div class="card">
+    <h2><span class="ico">🗓️</span> Data Retention</h2>
+    <ul>
+      <li><strong>Local data:</strong> Retained until you delete a recording or uninstall the app.</li>
+      <li><strong>Cloud data:</strong> Retained in Firestore while your account is active. Signing
+          out stops future syncing but does not delete existing cloud data. Delete recordings from
+          within the app to remove them from the cloud.</li>
+      <li><strong>Analytics &amp; crash data:</strong> Retained by Google for up to 14 months per
+          Google's standard retention policy.</li>
+    </ul>
+  </div>
+
+  <!-- 12. Children -->
+  <div class="card">
+    <h2><span class="ico">👶</span> Children's Privacy</h2>
+    <p>
+      Scribr is not directed at children under the age of 13. We do not knowingly collect
+      personal information from children under 13. If you believe a child has provided personal
+      information through the app, please contact us so we can delete it.
+    </p>
+  </div>
+
+  <!-- 13. Your Rights -->
+  <div class="card">
+    <h2><span class="ico">⚖️</span> Your Rights</h2>
+    <p>You have the right to:</p>
+    <ul>
+      <li><strong>Access:</strong> request a copy of data we hold about you.</li>
+      <li><strong>Deletion:</strong> delete your recordings and cloud data at any time from
+          within the app, or by emailing <a href="mailto:teamflexkit@gmail.com">teamflexkit@gmail.com</a> to request full data removal.</li>
+      <li><strong>Portability:</strong> export all recordings and transcriptions using the
+          Export all as ZIP feature in the app.</li>
+    </ul>
+  </div>
+
+  <!-- 14. Changes -->
+  <div class="card">
+    <h2><span class="ico">🔄</span> Changes to This Policy</h2>
+    <p>
+      We may update this privacy policy from time to time. When we do, the "Last updated" date
+      at the top of this page will be revised. We encourage you to review this page periodically.
+      Continued use of the app after changes constitutes acceptance of the updated policy.
+    </p>
+  </div>
+
+  <!-- 15. Contact -->
+  <div class="card">
+    <h2><span class="ico">📬</span> Contact</h2>
+    <p>
+      If you have any questions or requests regarding this privacy policy or your data, please
+      contact us at:
+    </p>
+    <p>
+      <strong>Email:</strong>
+      <a href="mailto:teamflexkit@gmail.com">teamflexkit@gmail.com</a>
+    </p>
+    <p>
+      <strong>Developer:</strong> Flexkit<br />
+      <strong>App:</strong> Scribr (com.flexkit.scribr)
+    </p>
+  </div>
+
+</main>
+
+<footer>
+  &copy; 2026 Flexkit. All rights reserved.
+</footer>
+
+</body>
+</html>
